@@ -1,0 +1,16 @@
+﻿@model PolovniAutomobiliMVC.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="_Carousel"/>
+
+<h2>Special offer!</h2>
+<h4>Special prices / limited time offer!</h4>
+<div class="row">
+    @foreach (var car in Model.specialOffers)
+    {
+        <partial name="_CarCard" model="car"/>
+    }
+</div>

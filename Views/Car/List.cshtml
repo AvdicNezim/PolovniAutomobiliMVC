@@ -1,0 +1,9 @@
+﻿@model PolovniAutomobiliMVC.ViewModels.CarListViewModel
+
+<div class="row">
+	<h1>@Model.currentCategory</h1>
+	@foreach(var car in Model.cars)
+	{
+		<partial name="_CarCard" model="car"/>
+	}
+</div>
